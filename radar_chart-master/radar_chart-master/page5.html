@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <style type="text/css">
+       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Roboto+Condensed:ital@1&display=swap');
+       #container {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        right: 10%;
+      }
+      .generate{
+            position: absolute;
+            left: 50%;
+            
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .next{
+            position: absolute;
+            left: 60%;
+            
+            font-family: 'Noto Sans TC', sans-serif;
+          
+        }
+        .form-container{
+            margin-left: 20px;
+            height:100%;
+            width:100%;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+        <h1>主題五</h1>
+    </div>
+    <div class="form-container">
+        <form> <!--每個面相有幾個問題，每個問題的回答選項都有分數。面相會是所有回答選項計算出來的平均值-->
+          <h2>Dimension 1: </h2>
+          <h3>Question 1:</h3>
+          <input type="radio" name="question1_1"> Answer1_1
+          <input type="radio" name="question1_1" > Answer1_2
+          <input type="radio" name="question1_1" > Answer1_3
+          <h3>Question 2:</h3>
+          <input type="radio" name="question1_2"> Answer2_1
+          <input type="radio" name="question1_2" > Answer2_2
+          <input type="radio" name="question1_2" > Answer2_3
+          <h3>Question 3:</h3>
+          <input type="radio" name="question1_3" > Answer3_1
+          <input type="radio" name="question1_3" > Answer3_2
+          <input type="radio" name="question1_3" > Answer3_3
+
+          <h2>Dimension 2: </h2>
+          <h3>Question 1:</h3>
+          <input type="radio" name="question2_1"> Answer1_1
+          <input type="radio" name="question2_1" > Answer1_2
+          <input type="radio" name="question2_1" > Answer1_3
+          <h3>Question 2:</h3>
+          <input type="radio" name="question2_2"> Answer2_1
+          <input type="radio" name="question2_2" > Answer2_2
+          <input type="radio" name="question2_2" > Answer2_3
+          <h3>Question 3:</h3>
+          <input type="radio" name="question2_3" > Answer3_1
+          <input type="radio" name="question2_3" > Answer3_2
+          <input type="radio" name="question2_3" > Answer3_3
+
+          <h2>Dimension 3: </h2>
+          <h3>Question 1:</h3>
+          <input type="radio" name="question3_1"> Answer1_1
+          <input type="radio" name="question3_1" > Answer1_2
+          <input type="radio" name="question3_1" > Answer1_3
+          <h3>Question 2:</h3>
+          <input type="radio" name="question3_2"> Answer2_1
+          <input type="radio" name="question3_2" > Answer2_2
+          <input type="radio" name="question3_2" > Answer2_3
+          <h3>Question 3:</h3>
+          <input type="radio" name="question3_3" > Answer3_1
+          <input type="radio" name="question3_3" > Answer3_2
+          <input type="radio" name="question3_3" > Answer3_3
+
+          <h2>Dimension 4: </h2>
+          <h3>Question 1:</h3>
+          <input type="radio" name="question4_1"> Answer1_1
+          <input type="radio" name="question4_1" > Answer1_2
+          <input type="radio" name="question4_1" > Answer1_3
+          <h3>Question 2:</h3>
+          <input type="radio" name="question4_2"> Answer2_1
+          <input type="radio" name="question4_2" > Answer2_2
+          <input type="radio" name="question4_2" > Answer2_3
+          <h3>Question 3:</h3>
+          <input type="radio" name="question4_3" > Answer3_1
+          <input type="radio" name="question4_3" > Answer3_2
+          <input type="radio" name="question4_3" > Answer3_3
+
+          <h2>Dimension 5: </h2>
+          <h3>Question 1:</h3>
+          <input type="radio" name="question5_1" > Answer1_1
+          <input type="radio" name="question5_1" > Answer1_2
+          <input type="radio" name="question5_1" > Answer1_3
+          <h3>Question 2:</h3>
+          <input type="radio" name="question5_2"> Answer2_1
+          <input type="radio" name="question5_2" > Answer2_2
+          <input type="radio" name="question5_2" > Answer2_3
+          <h3>Question 3:</h3>
+          <input type="radio" name="question5_3" > Answer3_1
+          <input type="radio" name="question5_3" > Answer3_2
+          <input type="radio" name="question5_3" > Answer3_3
+            
+            <p><input class="generate" onClick="anychart.onDocumentReady()" type="submit" value="產出雷達圖"></p> <!--按下按鈕後，產出雷達圖-->
+            
+            
+        </form>
+    </div>
+    <div id="container"></div>
+  </body>
+  <script> //reference:https://www.anychart.com/blog/2020/07/07/radar-chart-js/
+    anychart.onDocumentReady(function () {
+    // our data from bulbapedia
+      var data1 = [
+        {x: "HP", value: 39},
+        {x: "Attack", value: 52},
+        {x: "Defense", value: 43},
+        {x: "Special Attack", value: 60},
+        {x: "Special Defense", value: 50},
+        {x: "Speed", value: 65},
+      ];
+
+      var data2 = [
+        {x: "HP", value: 45},
+        {x: "Attack", value: 49},
+        {x: "Defense", value: 49},
+        {x: "Special Attack", value: 65},
+        {x: "Special Defense", value: 65},
+        {x: "Speed", value: 45},
+      ];  
+
+      var data3 = [
+        {x: "HP", value: 44},
+        {x: "Attack", value: 48},
+        {x: "Defense", value: 65},
+        {x: "Special Attack", value: 50},
+        {x: "Special Defense", value: 64},
+        {x: "Speed", value: 43},
+      ];  
+
+      // create radar chart
+      var chart = anychart.radar();
+      // set chart yScale settings
+      chart.yScale()
+        .minimum(35)
+        .maximum(65)
+        .ticks({'interval':5});
+
+      // create first series
+      chart.line(data1)
+      // create second series
+      chart.line(data2)
+      // create third series
+      chart.line(data3)
+      // create first series
+      // create second series
+      chart.area(data2).name('Bulbasaur').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
+      // create third series
+      chart.area(data3).name('Squirtle').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
+      chart.area(data1).name('Charmander').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+      // set chart title
+      chart.title("主題一雷達圖");
+
+      // set container id for the chart
+      chart.container('container');
+      // initiate chart drawing
+      chart.draw();
+
+    });
+  </script>
+</html>
