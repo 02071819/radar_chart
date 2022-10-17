@@ -16,112 +16,111 @@
         <p>Design by Marshall @ NSYSUMIS</p>
         <p class="notice" style="color:red"><b>完成填答後請先按下產生雷達圖再進行下一項測驗</b></p>
     </div>
-    <div class="dimension-container">
-        <div class="dimension1">
+    <form class="dimension-container" method="POST" action="">
+        <div name="dimension1">
             <!--每個面相有幾個問題，每個問題的回答選項都有分數。面相會是所有回答選項計算出來的平均值-->
             <h2>面向 1: </h2>
             <h4>問題 1:</h4>
-            <input type="radio" name="question1_1" value="20"> Answer1_1
+            <input type="radio" name="question1_1" id="question1_1" value="20"> Answer1_1
             <input type="radio" name="question1_1" value="40"> Answer1_2
             <input type="radio" name="question1_1" value="60"> Answer1_3
             <h4>問題 2:</h4>
-            <input type="radio" name="question1_2" value="20"> Answer2_1
+            <input type="radio" name="question1_2" id="question1_2" value="20"> Answer2_1
             <input type="radio" name="question1_2" value="40"> Answer2_2
             <input type="radio" name="question1_2" value="60"> Answer2_3
             <h4>問題 3:</h4>
-            <input type="radio" name="question1_3" value="20"> Answer3_1
+            <input type="radio" name="question1_3" id="question1_3" value="20"> Answer3_1
             <input type="radio" name="question1_3" value="40"> Answer3_2
             <input type="radio" name="question1_3" value="60"> Answer3_3
         </div>
-        <div class="dimension2">
+        <div name="dimension2">
             <h2>面向 2: </h2>
             <h4>問題 1:</h4>
-            <input type="radio" name="question2_1" value="20"> Answer2_1
+            <input type="radio" name="question2_1" id="question2_1" value="20"> Answer2_1
             <input type="radio" name="question2_1" value="40"> Answer2_2
             <input type="radio" name="question2_1" value="60"> Answer2_3
             <h4>問題 2:</h4>
-            <input type="radio" name="question2_2" value="20"> Answer2_1
+            <input type="radio" name="question2_2" id="question2_2" value="20"> Answer2_1
             <input type="radio" name="question2_2" value="40"> Answer2_2
             <input type="radio" name="question2_2" value="60"> Answer2_3
             <h4>問題 3:</h4>
-            <input type="radio" name="question2_3" value="20"> Answer2_3
+            <input type="radio" name="question2_3" id="question2_3" value="20"> Answer2_3
             <input type="radio" name="question2_3" value="40"> Answer2_3
             <input type="radio" name="question2_3" value="60"> Answer3_3
         </div>
-        <div class="dimension3">
+        <div name="dimension3">
             <h2>面向 3: </h2>
             <h4>問題 1:</h4>
-            <input type="radio" name="question3_1" value="20" required> Answer3_1
-            <input type="radio" name="question3_1" value="40"> Answer4_2
-            <input type="radio" name="question3_1" value="60"> Answer14_3
+            <input type="radio" name="question3_1" id="question3_1" value="20"> Answer3_1
+            <input type="radio" name="question3_1" value="40"> Answer3_2
+            <input type="radio" name="question3_1" value="60"> Answer3_3
             <h4>問題 2:</h4>
-            <input type="radio" name="question3_2" value="20"> Answer2_1
+            <input type="radio" name="question3_2" id="question3_2" value="20"> Answer2_1
             <input type="radio" name="question3_2" value="40"> Answer2_2
             <input type="radio" name="question3_2" value="60"> Answer2_3
             <h4>問題 3:</h4>
-            <input type="radio" name="question3_3" value="20"> Answer3_1
+            <input type="radio" name="question3_3" id="question3_3" value="20"> Answer3_1
             <input type="radio" name="question3_3" value="40"> Answer3_2
             <input type="radio" name="question3_3" value="60"> Answer3_3
         </div>
-        <div class="dimension4">
+        <div name="dimension4">
             <h2>面向 4: </h2>
             <h4>問題 1:</h4>
-            <input type="radio" name="question4_1" value="20"> Answer1_1
+            <input type="radio" name="question4_1" id="question4_1" value="20"> Answer1_1
             <input type="radio" name="question4_1" value="40"> Answer1_2
             <input type="radio" name="question4_1" value="60"> Answer1_3
             <h4>問題 2:</h4>
-            <input type="radio" name="question4_2" value="20"> Answer2_1
+            <input type="radio" name="question4_2" id="question4_2" value="20"> Answer2_1
             <input type="radio" name="question4_2" value="40"> Answer2_2
             <input type="radio" name="question4_2" value="60"> Answer2_3
             <h4>問題 3:</h4>
-            <input type="radio" name="question4_3" value="20"> Answer3_1
+            <input type="radio" name="question4_3" id="question4_3" value="20"> Answer3_1
             <input type="radio" name="question4_3" value="40"> Answer3_2
             <input type="radio" name="question4_3" value="60"> Answer3_3
         </div>
-        <div class="dimension5">
+        <div name="dimension5">
             <h2>面向 5: </h2>
             <h4>問題 1:</h4>
-            <input type="radio" name="question5_1" value="20"> Answer1_1
+            <input type="radio" name="question5_1" id="question5_1" value="20"> Answer1_1
             <input type="radio" name="question5_1" value="40"> Answer1_2
             <input type="radio" name="question5_1" value="60"> Answer1_3
             <h4>問題 2:</h4>
-            <input type="radio" name="question5_2" value="20"> Answer2_1
+            <input type="radio" name="question5_2" id="question5_2" value="20"> Answer2_1
             <input type="radio" name="question5_2" value="40"> Answer2_2
             <input type="radio" name="question5_2" value="60"> Answer2_3
             <h4>問題 3:</h4>
-            <input type="radio" name="question5_3" value="20"> Answer3_1
+            <input type="radio" name="question5_3" id="question5_3" value="20"> Answer3_1
             <input type="radio" name="question5_3" value="40"> Answer3_2
             <input type="radio" name="question5_3" value="60"> Answer3_3
 
             <!-- <form action="" method="POST"> -->
-                <div>
-                    <h4>面向 1 平均:</h4><em id="avg1" name="avg1"></em>
-                </div>
-                <div>
-                    <h4>面向 2 平均:</h4><em id="avg2" name="avg2"></em>
-                </div>
-                <div>
-                    <h4>面向 3 平均:</h4><em id="avg3" name="avg3"></em>
-                </div>
-                <div>
-                    <h4>面向 4 平均:</h4><em id="avg4" name="avg4"></em>
-                </div>
-                <div>
-                    <h4>面向 5 平均:</h4><em id="avg5" name="avg5"></em>
-                </div>
+            <div>
+                <h4>面向 1 平均:</h4><em id="avg1" name="avg1"></em>
+            </div>
+            <div>
+                <h4>面向 2 平均:</h4><em id="avg2" name="avg2"></em>
+            </div>
+            <div>
+                <h4>面向 3 平均:</h4><em id="avg3" name="avg3"></em>
+            </div>
+            <div>
+                <h4>面向 4 平均:</h4><em id="avg4" name="avg4"></em>
+            </div>
+            <div>
+                <h4>面向 5 平均:</h4><em id="avg5" name="avg5"></em>
+            </div>
             <!-- </form> -->
         </div>
 
+        <div class="button-group">
+            <button class="btn btn btn-primary" type="submit" id="MyButton">產出雷達圖</button>
+            <input type="submit" value="存進資料庫">
+            <button class="btn btn-secondary" type="button" onClick="window.location.reload();">重新產生雷達圖</button>
+            <a rel="noopener noreferrer" href="/page2" class="btn btn btn-dark" id="button">下一個測驗</a>
 
-    </div>
+        </div>
 
-
-    <div class="button-group">
-        <button class="btn btn btn-primary" type="submit" id="MyButton">產出雷達圖</button>
-        <button class="btn btn-secondary" type="button" onClick="window.location.reload();">重新產生雷達圖</button>
-        <a rel="noopener noreferrer" href="/page2" class="btn btn btn-dark" id="button">下一個測驗</a>
-
-    </div>
+    </form>
 
 
     <div id="container"></div>
