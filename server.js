@@ -83,21 +83,6 @@ app.post("/", function (req, res) {
   var answer5_1 = req.body.question5_1;
   var answer5_2 = req.body.question5_2;
   var answer5_3 = req.body.question5_3;
-  var answer6_1 = req.body.question6_1;
-  var answer6_2 = req.body.question6_2;
-  var answer6_3 = req.body.question6_3;
-  var answer7_1 = req.body.question7_1;
-  var answer7_2 = req.body.question7_2;
-  var answer7_3 = req.body.question7_3;
-  var answer8_1 = req.body.question8_1;
-  var answer8_2 = req.body.question8_2;
-  var answer8_3 = req.body.question8_3;
-  var answer9_1 = req.body.question9_1;
-  var answer9_2 = req.body.question9_2;
-  var answer9_3 = req.body.question9_3;
-  var answer10_1 = req.body.question10_1;
-  var answer10_2 = req.body.question10_2;
-  var answer10_3 = req.body.question10_3;
 
   var answer1_1 = parseInt(answer1_1, 10);
   var answer1_2 = parseInt(answer1_2, 10);
@@ -119,6 +104,49 @@ app.post("/", function (req, res) {
   var answer5_2 = parseInt(answer5_2, 10);
   var answer5_3 = parseInt(answer5_3, 10);
 
+  var avg1 = (answer1_1 + answer1_2 + answer1_3)/3;
+  var avg2 = (answer2_1 + answer2_2 + answer2_3)/3;
+  var avg3 = (answer3_1 + answer3_2 + answer3_3)/3;
+  var avg4 = (answer4_1 + answer4_2 + answer4_3)/3;
+  var avg5 = (answer5_1 + answer5_2 + answer5_3)/3;
+
+  // console.log(answer1_1);
+  // console.log(answer1_2);
+  // console.log(answer1_3);
+  // console.log(avg1);
+  // query做SQL語法 insert是否成功
+  conn.query(
+    "INSERT INTO average (avg1, avg2, avg3, avg4, avg5) VALUES(?, ?, ?, ?, ?);",
+    [avg1, avg2, avg3, avg4, avg5],
+    function (error, result) {
+      if (error) {
+        // Throw your error output here.
+        console.log("An error occurred.");
+      } else {
+        // Throw a success message here.
+        console.log("1 record successfully inserted into db");
+      }
+    }
+  );
+});
+
+app.post("/page2",function (req, res) {
+  var answer6_1 = req.body.question6_1;
+  var answer6_2 = req.body.question6_2;
+  var answer6_3 = req.body.question6_3;
+  var answer7_1 = req.body.question7_1;
+  var answer7_2 = req.body.question7_2;
+  var answer7_3 = req.body.question7_3;
+  var answer8_1 = req.body.question8_1;
+  var answer8_2 = req.body.question8_2;
+  var answer8_3 = req.body.question8_3;
+  var answer9_1 = req.body.question9_1;
+  var answer9_2 = req.body.question9_2;
+  var answer9_3 = req.body.question9_3;
+  var answer10_1 = req.body.question10_1;
+  var answer10_2 = req.body.question10_2;
+  var answer10_3 = req.body.question10_3;
+
   var answer6_1 = parseInt(answer6_1, 10);
   var answer6_2 = parseInt(answer6_2, 10);
   var answer6_3 = parseInt(answer6_3, 10);
@@ -139,26 +167,15 @@ app.post("/", function (req, res) {
   var answer10_2 = parseInt(answer10_2, 10);
   var answer10_3 = parseInt(answer10_3, 10);
 
-  var avg1 = (answer1_1 + answer1_2 + answer1_3)/3;
-  var avg2 = (answer2_1 + answer2_2 + answer2_3)/3;
-  var avg3 = (answer3_1 + answer3_2 + answer3_3)/3;
-  var avg4 = (answer4_1 + answer4_2 + answer4_3)/3;
-  var avg5 = (answer5_1 + answer5_2 + answer5_3)/3;
   var avg6 = (answer6_1 + answer6_2 + answer6_3)/3;
   var avg7 = (answer7_1 + answer7_2 + answer7_3)/3;
   var avg8 = (answer8_1 + answer8_2 + answer8_3)/3;
   var avg9 = (answer9_1 + answer9_2 + answer9_3)/3;
   var avg10 = (answer10_1 + answer10_2 + answer10_3)/3;
 
-
-  console.log(answer1_1);
-  console.log(answer1_2);
-  console.log(answer1_3);
-  console.log(avg1);
-  // query做SQL語法 insert是否成功
   conn.query(
-    "INSERT INTO average (avg1, avg2, avg3, avg4, avg5) VALUES(?, ?, ?, ?, ?);",
-    [avg1, avg2, avg3, avg4, avg5],
+    "INSERT INTO average (avg6, avg7, avg8, avg9, avg10) VALUES(?, ?, ?, ?, ?);",
+    [avg6, avg7, avg8, avg9, avg10],
     function (error, result) {
       if (error) {
         // Throw your error output here.
@@ -170,8 +187,6 @@ app.post("/", function (req, res) {
     }
   );
 });
-
-
 //  未算平均值之原程式碼
 
 // app.get("/", function (req, res) {
